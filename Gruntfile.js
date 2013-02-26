@@ -118,12 +118,14 @@ module.exports = function (grunt) {
         },
         compass: {
             options: {
+                require: ['compass-h5bp', 'ceaser-easing'],
                 sassDir: '<%= yeoman.app %>/styles',
-                cssDir: '.tmp/styles',
+                cssDir: '<%= yeoman.app %>/styles',
                 imagesDir: '<%= yeoman.app %>/images',
                 javascriptsDir: '<%= yeoman.app %>/scripts',
                 fontsDir: '<%= yeoman.app %>/styles/fonts',
                 importPath: 'app/components',
+                raw: 'preferred_syntax = :sass\n',
                 relativeAssets: true
             },
             dist: {},
@@ -173,11 +175,14 @@ module.exports = function (grunt) {
         },
         imagemin: {
             dist: {
+                options: {
+                    optimizationLevel: 3
+                },
                 files: [{
                     expand: true,
                     cwd: '<%= yeoman.app %>/images',
                     src: '*.{png,jpg,jpeg}',
-                    dest: '<%= yeoman.dist %>/images'
+                    dest: '<%= yeoman.dist %>/images/'
                 }]
             }
         },
@@ -233,7 +238,6 @@ module.exports = function (grunt) {
     });
 
     grunt.renameTask('regarde', 'watch');
-    // remove when mincss task is renamed
     grunt.renameTask('mincss', 'cssmin');
 
     grunt.registerTask('server', function (target) {
@@ -268,7 +272,7 @@ module.exports = function (grunt) {
         'compass:dist',
         'useminPrepare',
         'requirejs',
-        'imagemin',
+        // 'imagemin',
         'cssmin',
         'htmlmin',
         'concat',
