@@ -1,3 +1,4 @@
+/*jslint node: true */
 'use strict';
 module.exports = function (grunt) {
     // load all grunt tasks
@@ -5,99 +6,122 @@ module.exports = function (grunt) {
 
     // configurable paths
     var yeomanConfig = {
-        app: 'app',
+        app: 'app'
     };
 
     grunt.initConfig({
         yeoman: yeomanConfig,
-        jsfiles: ['foo/*.js', 'bar/*.js'],
+        jsfiles: ['<%= yeoman.app %>/assets/js/*.js'],
+        coffeefiles:['<%= yeoman.app %>/assets/coffee/*.coffee'],
         watch: {
             coffee: {
-                files: ['<%= yeoman.app %>/assets/scripts/*.coffee'],
-                tasks: ['coffee:dist']
-            },
-            coffeeTest: {
-                files: ['test/spec/*.coffee'],
-                tasks: ['coffee:test']
+                files: '<%= coffeefiles %>',
+                tasks: ['coffee:app']
             },
             compass: {
-                files: ['<%= yeoman.app %>/assets/styles/*.{scss,sass}'],
-                tasks: ['compass']
+                files: ['<%= yeoman.app %>/assets/sass/*.{scss,sass}'],
+                tasks: ['compass:dist']
             },
             livereload: {
                 files: [
                     '<%= yeoman.app %>/*.html',
-                    '{.tmp,<%= yeoman.app %>}/assets/styles/*.css',
-                    '{.tmp,<%= yeoman.app %>}/assets/scripts/*.js',
-                    '<%= yeoman.app %>/images/*.{png,jpg,jpeg}'
+                    '<%= yeoman.app %>}/assets/css/*.css',
+                    '<%= jsfiles %>',
+                    '<%= yeoman.app %>/assets/images/*.{png,jpg,jpeg}'
                 ],
                 tasks: ['livereload']
             }
         },
         coffee: {
-            dist: {
-                files: {
-                    '.tmp/assets/scripts/coffee.js': '<%= yeoman.app %>/assets/scripts/*.coffee'
-                }
-            },
-            test: {
-                files: [{
-                    expand: true,
-                    cwd: '.tmp/spec',
-                    src: '*.coffee',
-                    dest: 'test/spec'
-                }]
+            app: {
+                expand: true,
+                cwd: '<%= yeoman.app %>/assets/coffee',
+                src: ['*.coffee'],
+                dest: '<%= yeoman.app %>/assets/js/',
+                ext: '.js',
+                filter: 'isFile'
             }
         },
         compass: {
-            options: {
-                require: ['compass-h5bp', 'ceaser-easing'],
-                sassDir: '<%= yeoman.app %>/assets/styles',
-                cssDir: '<%= yeoman.app %>/assets/styles',
-                imagesDir: '<%= yeoman.app %>/images',
-                javascriptsDir: '<%= yeoman.app %>/assets/scripts',
-                fontsDir: '<%= yeoman.app %>/assets/styles/fonts',
-                importPath: '<%= yeoman.app %>/assets/components',
-                raw: 'preferred_syntax = :sass\n',
-                'output-style': 'compressed',
-                relativeAssets: true
-            },
-            server: {
+            dist:{
                 options: {
-                    debugInfo: true
+                    require: ['compass-h5bp', 'ceaser-easing'],
+                    sassDir: '<%= yeoman.app %>/assets/sass',
+                    cssDir: '<%= yeoman.app %>/assets/css',
+                    imagesDir: '<%= yeoman.app %>/assets/images',
+                    javascriptsDir: '<%= yeoman.app %>/assets/js',
+                    fontsDir: '<%= yeoman.app %>/assets/font',
+                    importPath: '<%= yeoman.app %>/assets/components',
+                    raw: 'preferred_syntax = :sass\n',
+                    environment: 'development',
+                    relativeAssets: true
+                },
+                server: {
+                    options: {
+                        debugInfo: true
+                    }
+                }
+            },
+            min: {
+                options: {
+                    require: ['compass-h5bp', 'ceaser-easing'],
+                    sassDir: '<%= yeoman.app %>/assets/sass',
+                    cssDir: '<%= yeoman.app %>/assets/css',
+                    imagesDir: '<%= yeoman.app %>/assets/images',
+                    javascriptsDir: '<%= yeoman.app %>/assets/js',
+                    fontsDir: '<%= yeoman.app %>/assets/font',
+                    importPath: '<%= yeoman.app %>/assets/components',
+                    raw: 'preferred_syntax = :sass\n',
+                    outputStyle: 'compressed',
+                    environment: 'production',
+                    noLineComments: true,
+                    relativeAssets: true
+                },
+                server: {
+                    options: {
+                        debugInfo: true
+                    }
                 }
             }
         },
         concat: {
             dist: {
-                src: ['assets/js/base.js', 'assets/js/simulator.js'],
-                dest: 'assets/js/main.js'
+                src: '<%= jsfiles %>',
+                dest: '<%= yeoman.app %>/assets/js/main.conc.js'
             }
         },
         uglify: {
             dist: {
-
-            },
+                files: {
+                    '<%= yeoman.app %>/assets/js/main.min.js': '<%= yeoman.app %>/assets/js/main.conc.js'
+                }
+            }
         },
         jshint: {
-            all: ['Gruntfile.js', '<%= yeoman.app %>assets/scripts/*.js']
+            all: ['Gruntfile.js', '<%= yeoman.app %>/assets/js/*.js']
         },
         bower: {
-            rjsConfig: 'app/assets/scripts/main.js',
+            rjsConfig: '<%= yeoman.app %>/assets/js/main.js',
             indent: '    '
         }
     });
 
     grunt.renameTask('regarde', 'watch');
-    grunt.registerTask('build', [
-        // css related stuff
-        'compass',
-        // js related stuff
-        'coffee',
+
+    grunt.registerTask('compilemin', [
+        'compass:min',
+        'coffee:app',
         'jshint',
         'concat',
         'uglify'
     ]);
 
-    grunt.registerTask('default', ['build']);
+    grunt.registerTask('compile', [
+        'compass:dist',
+        'coffee:app',
+        'jshint',
+        'concat'
+    ]);
+
+    grunt.registerTask('default', ['compile']);
 };
