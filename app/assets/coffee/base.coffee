@@ -1,0 +1,2 @@
+killer = {}
+console.log('whatsup')
