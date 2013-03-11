@@ -4,8 +4,9 @@
 @import "h5bp"
 @import "ceaser-easing"
 @import "compass/css3/"
-@import "compass/typography/"
-@import "compass/utilities/"
+@import "compass/typography"
+@import "compass/utilities"
+@import "compass/css3/images"
 
 /* ====================================================================================================== */
 /* Variables
@@ -21,5 +22,29 @@ $a_color: #3b0000
 /* ====================================================================================================== */
 /* General
 /* ====================================================================================================== */
-body
-	background-color: blue
+html, body
+	height: 100%
+	width: 100%
+	+background(radial-gradient(center top,rgba(255,255,255,.15) 0%, rgba(255,255,255,0) 80%), url('../images/layout/pat2.png'))
+
+
+.cont
+	width: 1024px
+	background-color: #F00
+	height: 200px
+	margin: 0px auto
+
+	header
+		h1
+			margin: 15px
+			+inline-block
+			width: 119px
+			height: 53px
+			background: url(../images/layout/h1.png) no-repeat
+
+		figure
+
+			img
+				position: relative
+				+inline-block
+				margin: 0 200px 0 0

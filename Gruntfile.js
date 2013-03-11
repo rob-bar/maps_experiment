@@ -87,13 +87,13 @@ module.exports = function (grunt) {
         concat: {
             dist: {
                 src: '<%= jsfiles %>',
-                dest: '<%= yeoman.app %>/assets/js/main.conc.js'
+                dest: '<%= yeoman.app %>/assets/src/main.conc.js'
             }
         },
         uglify: {
             dist: {
                 files: {
-                    '<%= yeoman.app %>/assets/js/main.min.js': '<%= yeoman.app %>/assets/js/main.conc.js'
+                    '<%= yeoman.app %>/assets/src/main.min.js': '<%= yeoman.app %>/assets/src/main.conc.js'
                 }
             }
         },

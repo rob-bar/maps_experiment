@@ -9,4 +9,8 @@
 * google map styled with [styledmaps](http://gmaps-samples-v3.googlecode.com/svn/trunk/styledmaps/wizard/index.html)
 
 * things that grunt should do
-	*
+	* compile compass & sass files with plugins
+	* compile coffeescript files
+	* lint, concat & minify when in 'prod'
+
+* livereload is handled by codekit

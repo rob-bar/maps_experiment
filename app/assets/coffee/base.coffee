@@ -1,2 +1,2 @@
-killer = {}
+site = {}
 console.log('whatsup')
