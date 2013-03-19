@@ -14,11 +14,7 @@ class Controller_Base extends Controller_Rest {
   }
 
   public function action_index() {
-    return $this->response(array(
-        'engine' => 'Ready for Resting',
-        'Shutting down...' => array(
-            3, 2, 1
-        )
-    ));
+    $cities = DB::select()->from('cities')->execute()->as_array();
+    return $this->response($cities);
   }
 }

@@ -1,0 +1,511 @@
+cities:
+	-
+		name: London
+		lat: 51.511214
+		lng: -0.119824
+		has_coords: 1
+	-
+		name: Berlin
+		lat: 52.519171
+		lng: 13.406091
+		has_coords: 1
+	-
+		name: Madrid
+		lat: 40.416775
+		lng: -3.70379
+		has_coords: 1
+	-
+		name: Rome
+		lat: 41.901514
+		lng: 12.460774
+		has_coords: 1
+	-
+		name: Paris
+		lat: 48.856614
+		lng: 2.352222
+		has_coords: 1
+	-
+		name: Hamburg
+		lat: 53.551085
+		lng: 9.993682
+		has_coords: 1
+	-
+		name: Budapest
+		lat: 47.497912
+		lng: 19.040235
+		has_coords: 1
+	-
+		name: Vienna
+		lat: 48.208174
+		lng: 16.373819
+		has_coords: 1
+	-
+		name: Warsaw
+		lat: 52.229676
+		lng: 21.012229
+		has_coords: 1
+	-
+		name: Bucharest
+		lat: 44.4325
+		lng: 26.103889
+		has_coords: 1
+	-
+		name: Barcelona
+		lat: 41.385064
+		lng: 2.173404
+		has_coords: 1
+	-
+		name: Munich
+		lat: 48.136607
+		lng: 11.577085
+		has_coords: 1
+	-
+		name: Milan
+		lat: 45.465454
+		lng: 9.186516
+		has_coords: 1
+	-
+		name: Prague
+		lat: 50.075538
+		lng: 14.437801
+		has_coords: 1
+	-
+		name: Sofia
+		lat: 42.697839
+		lng: 23.32167
+		has_coords: 1
+	-
+		name: Brussels
+		lat: 50.85034
+		lng: 4.35171
+		has_coords: 1
+	-
+		name: Birmingham
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Cologne
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Naples
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Turin
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Athens
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Stockholm
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Marseille
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Valencia
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Amsterdam
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Kraków
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Leeds
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Łódź
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Riga
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Seville
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Frankfurt
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Zaragoza
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Palermo
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Wrocław
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Rotterdam
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Genoa
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Helsinki
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Stuttgart
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Düsseldorf
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Glasgow
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Dortmund
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Essen
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Málaga
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Poznań
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Copenhagen
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Vilnius
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Bremen
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Lisbon
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Sheffield
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Leipzig
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Dresden
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Dublin
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Hannover
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Gothenburg
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: The Hague
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Bradford
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Nuremberg
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Duisburg
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Antwerp
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Edinburgh
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Lyon
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Manchester
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Gdańsk
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Toulouse
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Murcia
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Liverpool
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Bratislava
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Bristol
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Szczecin
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Brno
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Palma
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Tallinn
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Bologna
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Bochum
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Las Palmas de Gran Canaria
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Florence
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Thessaloniki
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Bydgoszcz
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Kaunas
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Wuppertal
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Bilbao
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Lublin
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Nice
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Plovdiv
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Varna
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Alicante
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Córdoba
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Bielefeld
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Wakefield
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Utrecht
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Cardiff
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Bari
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Valladolid
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Katowice
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Aarhus
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Ostrava
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Coventry
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Wirral
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Cluj-Napoca
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Malmö
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Timişoara
+		lat:
+		lng:
+		has_coords:0
+	-
+		name: Mannheim
+		lat:
+		lng:
+		has_coords:0
