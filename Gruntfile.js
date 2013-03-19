@@ -18,6 +18,10 @@ module.exports = function (grunt) {
                 files: '<%= coffeefiles %>',
                 tasks: ['coffee:app']
             },
+            js: {
+                files: '<%= jsfiles %>',
+                tasks: ['jshint','concat']
+            },
             compass: {
                 files: ['<%= yeoman.app %>/assets/sass/*.{scss,sass}'],
                 tasks: ['compass:dist']

@@ -389,10 +389,16 @@ table {
   *zoom: 1;
 }
 
+@font-face {
+  font-family: "daxcondensed";
+  src: url('../font/daxcondensed.eot');
+  src: url('../font/daxcondensed.eot?#iefix') format('eot'), url('../font/daxcondensed.woff') format('woff'), url('../font/daxcondensed.ttf') format('truetype'), url('../font/daxcondensed.svg') format('svg');
+}
+
 /* ====================================================================================================== */
 /* General */
 /* ====================================================================================================== */
-/* line 25, ../sass/style.sass */
+/* line 26, ../sass/style.sass */
 html, body {
   height: 100%;
   width: 100%;
@@ -403,14 +409,17 @@ html, body {
   background: radial-gradient(center top, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 80%), url("../images/layout/pat2.png");
 }
 
-/* line 31, ../sass/style.sass */
+/* line 32, ../sass/style.sass */
 .cont {
   width: 1024px;
-  background-color: red;
-  height: 200px;
   margin: 0px auto;
 }
-/* line 38, ../sass/style.sass */
+/* line 36, ../sass/style.sass */
+.cont header {
+  position: relative;
+  z-index: 10;
+}
+/* line 39, ../sass/style.sass */
 .cont header h1 {
   margin: 15px;
   display: -moz-inline-stack;
@@ -423,7 +432,13 @@ html, body {
   height: 53px;
   background: url(../images/layout/h1.png) no-repeat;
 }
-/* line 47, ../sass/style.sass */
+/* line 46, ../sass/style.sass */
+.cont header figure {
+  float: right;
+  margin: 15px;
+  pointer-events: none;
+}
+/* line 50, ../sass/style.sass */
 .cont header figure img {
   position: relative;
   display: -moz-inline-stack;
@@ -432,5 +447,70 @@ html, body {
   *vertical-align: auto;
   zoom: 1;
   *display: inline;
-  margin: 0 200px 0 0;
+  margin: 0 30px 0 0;
+}
+/* line 55, ../sass/style.sass */
+.cont section#billboard {
+  z-index: 5;
+  position: relative;
+  width: 953px;
+  height: 605px;
+  display: block;
+  margin: 5px auto;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.7) 0 15px 30px 5px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.7) 0 15px 30px 5px;
+  box-shadow: rgba(0, 0, 0, 0.7) 0 15px 30px 5px;
+}
+/* line 64, ../sass/style.sass */
+.cont section#billboard div#glass {
+  width: 100%;
+  height: 100%;
+  display: block;
+  pointer-events: none;
+  position: relative;
+  background: url(../images/layout/glass.png) no-repeat;
+}
+/* line 72, ../sass/style.sass */
+.cont section#billboard div#map_canvas {
+  width: 883px;
+  height: 535px;
+  position: absolute;
+  margin: 35px;
+}
+/* line 78, ../sass/style.sass */
+.cont section#billboard > img {
+  position: absolute;
+}
+/* line 81, ../sass/style.sass */
+.cont section#billboard .tl {
+  top: 10px;
+  left: 1px;
+}
+/* line 84, ../sass/style.sass */
+.cont section#billboard .tr {
+  top: 10px;
+  right: 3px;
+}
+/* line 87, ../sass/style.sass */
+.cont section#billboard .tright {
+  top: 0px;
+  right: 0px;
+  pointer-events: none;
+}
+/* line 91, ../sass/style.sass */
+.cont section#billboard .bl {
+  bottom: -5px;
+  left: 1px;
+}
+/* line 94, ../sass/style.sass */
+.cont section#billboard .br {
+  bottom: -5px;
+  right: 3px;
+}
+/* line 98, ../sass/style.sass */
+.cont footer {
+  margin: 25px 0 0 0;
+  text-align: center;
+  font-family: "daxcondensed", Arial, sans-serif;
+  text-shadow: rgba(255, 255, 255, 0.1) 1px 1px 0px;
 }

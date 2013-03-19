@@ -19,6 +19,7 @@ $a_color: #3b0000
 +h5bp-normalize
 +h5bp-helpers
 
++font-face("daxcondensed", font-files("daxcondensed.woff", "daxcondensed.ttf", "daxcondensed.svg"), "daxcondensed.eot")
 /* ====================================================================================================== */
 /* General
 /* ====================================================================================================== */
@@ -30,11 +31,11 @@ html, body
 
 .cont
 	width: 1024px
-	background-color: #F00
-	height: 200px
 	margin: 0px auto
 
 	header
+		position: relative
+		z-index: 10
 		h1
 			margin: 15px
 			+inline-block
@@ -43,8 +44,59 @@ html, body
 			background: url(../images/layout/h1.png) no-repeat
 
 		figure
-
+			float: right
+			margin: 15px
+			pointer-events: none
 			img
 				position: relative
 				+inline-block
-				margin: 0 200px 0 0
+				margin: 0 30px 0 0
+
+	section#billboard
+		z-index: 5
+		position: relative
+		width: 953px
+		height: 605px
+		display: block
+		margin: 5px auto
+		+box-shadow(rgba(0, 0, 0, .7) 0 15px 30px 5px)
+
+		div#glass
+			width: 100%
+			height: 100%
+			display: block
+			pointer-events: none
+			position: relative
+			background: url(../images/layout/glass.png) no-repeat
+
+		div#map_canvas
+			width: 883px
+			height: 535px
+			position: absolute
+			margin: 35px
+
+		>img
+			position: absolute
+
+		.tl
+			top: 10px
+			left: 1px
+		.tr
+			top: 10px
+			right: 3px
+		.tright
+			top: 0px
+			right: 0px
+			pointer-events: none
+		.bl
+			bottom: -5px
+			left: 1px
+		.br
+			bottom: -5px
+			right: 3px
+
+	footer
+		margin: 25px 0 0 0
+		text-align: center
+		font-family: 'daxcondensed', Arial, sans-serif
+		+text-shadow(rgba(255, 255, 255, .1) 1px 1px 0px)
