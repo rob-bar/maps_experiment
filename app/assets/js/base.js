@@ -1,6 +1,9 @@
 (function() {
 
   window.experiment = {
+    config: {
+      servicepath: "../service/"
+    },
     map: {
       initialize: function() {
         var mapOptions;
@@ -22,7 +25,16 @@
   $(function() {
     return $.getJSON("assets/json/mapstyle.json", function(json) {
       experiment.map.style = json;
-      return experiment.map.initialize();
+      experiment.map.initialize();
+      experiment.city = new experiment.models.City();
+      experiment.cities = new experiment.collections.Cities();
+      return experiment.cities.fetch({
+        success: function(models) {
+          return models.each(function(city) {
+            return console.log(city);
+          });
+        }
+      });
     });
   });
 

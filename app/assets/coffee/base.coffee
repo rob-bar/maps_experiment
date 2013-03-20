@@ -1,4 +1,6 @@
 window.experiment =
+	config:
+		servicepath: "../service/"
 	map:
 		initialize: ->
 			mapOptions =
@@ -16,4 +18,12 @@ $ ->
 	$.getJSON("assets/json/mapstyle.json", (json) ->
 		experiment.map.style = json
 		experiment.map.initialize()
+
+		experiment.city = new experiment.models.City()
+		experiment.cities = new experiment.collections.Cities()
+
+		experiment.cities.fetch({
+		success: (models) ->
+			models.each((city) -> console.log city)
+		})
 	)

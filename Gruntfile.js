@@ -11,8 +11,8 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
         yeoman: yeomanConfig,
-        jsfiles: ['<%= yeoman.app %>/assets/js/*.js'],
-        coffeefiles:['<%= yeoman.app %>/assets/coffee/*.coffee'],
+        jsfiles: ['<%= yeoman.app %>/assets/js/*.js','<%= yeoman.app %>/assets/js/models/*.js','<%= yeoman.app %>/assets/js/collections/*.js','<%= yeoman.app %>/assets/js/views/*.js'],
+        coffeefiles:['<%= yeoman.app %>/assets/coffee/*.coffee','<%= yeoman.app %>/assets/coffee/*/*.coffee'],
         watch: {
             coffee: {
                 files: '<%= coffeefiles %>',
@@ -40,7 +40,7 @@ module.exports = function (grunt) {
             app: {
                 expand: true,
                 cwd: '<%= yeoman.app %>/assets/coffee',
-                src: ['*.coffee'],
+                src: ['*.coffee','*/*.coffee'],
                 dest: '<%= yeoman.app %>/assets/js/',
                 ext: '.js',
                 filter: 'isFile'
